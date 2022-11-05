@@ -28,6 +28,10 @@ function getRecipesFromStorage() {
   let rec = localStorage.getItem("recipes");
   let parsedRec = JSON.parse(rec);
 
+  if (parsedRec == null) {
+    return [];
+  }
+
   return parsedRec;
 }
 
